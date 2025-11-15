@@ -1,0 +1,24 @@
+{
+  "name": "lumen-penalty-contest",
+  "version": "1.0.0",
+  "description": "Privacy-preserving penalty shootout prediction game with FHE",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.cjs --network sepolia",
+    "test": "hardhat test"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^1.5.0",
+    "@fhevm/solidity": "^0.9.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4"
+  },
+  "devDependencies": {
+    "@fhevm/hardhat-plugin": "0.3.0-0",
+    "@fhevm/mock-utils": "0.3.0-0",
+    "@fhevm/solidity": "^0.9.1",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  }
+}

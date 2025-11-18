@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 70% 50%;
+    --primary-foreground: 144 100% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 190 100% 50%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142 70% 50%;
+
+    --radius: 0.5rem;
+
+    /* Cyber Finance Colors */
+    --neon-green: 142 70% 50%;
+    --neon-red: 0 100% 60%;
+    --neon-blue: 190 100% 50%;
+    --matrix-bg: 150 100% 2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      linear-gradient(rgba(0, 255, 128, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 128, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .box-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.1);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes bar-rise {
+  from {
+    transform-origin: bottom;
+  }
+
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+.animate-bar-rise {
+  animation: bar-rise 0.8s ease-out;
+}
+
+@keyframes trajectory-line {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.animate-trajectory-line {
+  animation: trajectory-line 1.2s ease-out;
+}
